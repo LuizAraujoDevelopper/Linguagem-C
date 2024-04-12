@@ -1,0 +1,41 @@
+#include <stdio.h>
+//mostea a implementação de fibonaci até o numero desejado
+void fibo1(int a,int b,int n){
+    int c;
+    
+    if(n == 0 ){
+       
+    }
+    else{
+    
+        c = b;
+        b = a + b;
+        a = c;
+        printf("%d ",b);
+        fibo1(a,b,n-1);
+    }
+}
+//calcula e retorna o valor de n
+int fibo(int n){
+    if(n == 0){
+        return 0;
+    }
+    else{
+        if(n == 1){
+            return 1;
+        }
+        else{
+            return fibo(n-1) + fibo(n-2);
+        }
+    }
+}
+
+
+int main(){
+    int n;
+    scanf("%d",&n);
+    printf("%d\n",fibo(n));
+    printf(" 0 1 ");
+    fibo1(0,1,n-1);
+    
+}
